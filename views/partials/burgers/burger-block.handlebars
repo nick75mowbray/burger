@@ -1,7 +1,34 @@
-<li>
-	{{burger_name}}
 
+
+{{!-- burger cards --}}
+<div class="burger-card">
+	
+	<p class="burger-name">{{burger_name}}</p>
+	
 	<button class="change-eaten" data-id="{{id}}" data-newDevoured="{{devoured}}">
-		{{#if devoured}}<img src="../../../public/assets/img/hamburger-solid.svg" class="hamburger-icon"></img>Eat Again{{else}}<i class="fas fa-utensils"></i>Eat Me2{{/if}}
+		{{#if devoured}}Eat Me!{{else}}Eat Again{{/if}}
 	</button>
-</li>
+
+</div>
+
+{{!-- bite mark --}}
+{{#if devoured}}
+{{else}}
+
+<div class="bitemarks">
+
+	<svg class="bitemark circ1" height="30" width="30">
+  		<circle cx="15" cy="15" r="10" fill="#333333" />
+	</svg>
+
+	<svg class="bitemark circ2" height="30" width="30">
+  		<circle cx="15" cy="15" r="12" fill="#333333" />
+	</svg>
+
+	<svg class="bitemark circ3" height="30" width="30">
+  		<circle cx="15" cy="15" r="10" fill="#333333" />
+	</svg>
+
+</div>
+
+{{/if}}

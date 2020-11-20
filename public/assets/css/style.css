@@ -2,8 +2,12 @@
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
 }
-h1, h2, h3 {
+body {
+    background-color: #333333;
+}
+h1 {
     font-family: 'Fredoka One', cursive;
     font-weight: 200;
 }
@@ -49,8 +53,116 @@ ul {
 .burger-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    margin: 50px 0;
 }
-.hamburger-icon {
-    
+button {
+    border: none;
+    outline: none;
+    padding: 0 5px;
+    font-weight: 600;
+    color: #333333;
+}
+button.change-eaten {
+    height: 100%;
+    width: 100px;
+}
+button:hover, button:focus {
+    background-color: red;
+    color: #ffffff;
+}
+.burger-card {
+    padding-left: 32px;
+    border-radius: 3px;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    height: 35px;
+    font-weight: 600;
+}
+.burger-name {
+    color: #333333;
+}
+#container-left, #container-right {
+    width: 45vw;
+}
+h2 {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/* bite mark */
+.bitemarks {
+    position: relative;
+}
+.bitemark {
+    position: absolute;
+    z-index: 5;
+}
+.circ1 {
+    top: -45px;
+    left: -15px;
+}
+.circ2 {
+    top: -56px;
+    left: -4px;
+}
+.circ3 {
+    top: -64px;
+    left: 7px;
+}
+/* form */
+.form-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#add-title {
+    margin-top: 50px;
+}
+.add-line {
+    margin-top: 5px;
+    border: none;
+    border-top: 3px solid red;
+    width: 300px;
+}
+.create-form {
+    margin: 15px 0;
+    text-align: center;
+    width: 400px;
+}
+input[type="text"] {
+    height: 35px;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: #333333;
+    padding: 6px 16px;
+}
+input[type="text"]:focus {
+    outline: red;
+    border: red;
+}
+.checkboxes {
+    display: flex;
+    justify-content: space-around;
+}
+.form-group {
+    margin: 8px;
+}
+button[type="submit"] {
+    margin: 15px 0 30px 0;
+    padding: 8px 16px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: #ffffff;
+}
+button[type="submit"]:hover, button[type="submit"]:focus {
+    background-color: lightgray;
+    box-shadow: 0px 0px 6px #444444;
 }
