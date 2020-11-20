@@ -1,24 +1,37 @@
-<h1>Eat Da Burger!</h1>
+<div class="hero">
+  <h1 class="title">Eat Da </h1>
+  <h1 class="title" id="burger-text">Burger!</h1>
+  <hr class="line">
+</div>
 
-<h2>Burgers to be eaten</h2>
+<div class="burger-container">
+  
+  <div id="container-left">
+    <h2>Burgers to be eaten</h2>
+<i class="fas fa-camera"></i>
+<i class="fas fa-hamburger"></i>
+    <ul>
+      {{#each burgers}}
+        {{#unless devoured}}
+          {{> burgers/burger-block sleep=true}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  
+  <div id="container-right">
+    <h2>Burgers That have been eaten</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block sleep=false}}
+        {{/if}}
+      {{/each}}
+   </ul>
+  </div>
 
-<h2>Burgers That have been eaten</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+</div>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
