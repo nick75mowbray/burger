@@ -53,6 +53,7 @@ ul {
 .burger-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 50px 0;
 }
 button {
@@ -85,7 +86,7 @@ button:hover, button:focus {
     color: #333333;
 }
 #container-left, #container-right {
-    width: 45vw;
+    width: 580px;
 }
 h2 {
     text-align: center;
